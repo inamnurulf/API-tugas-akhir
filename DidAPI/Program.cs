@@ -1,5 +1,6 @@
 global using DipApi.Data;
 global using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 

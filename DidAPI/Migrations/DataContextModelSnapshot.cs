@@ -30,6 +30,9 @@ namespace DidAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Checkbox")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("Deadline")
                         .HasColumnType("datetime2");
 

@@ -48,6 +48,7 @@ namespace DidAPI.Controllers
             dbMissi.Title = request.Title;
             dbMissi.Deadline = request.Deadline;
             dbMissi.Description = request.Description;
+            dbMissi.Checkbox = request.Checkbox;
             
 
             await _context.SaveChangesAsync();

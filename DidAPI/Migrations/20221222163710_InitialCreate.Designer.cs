@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DidAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221220103848_CreateInitial")]
-    partial class CreateInitial
+    [Migration("20221222163710_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace DidAPI.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Checkbox")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("Deadline")
                         .HasColumnType("datetime2");
